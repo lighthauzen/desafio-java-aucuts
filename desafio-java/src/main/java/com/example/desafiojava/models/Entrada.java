@@ -1,5 +1,6 @@
 package com.example.desafiojava.models;
 
+import com.example.desafiojava.Jogada;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -10,13 +11,18 @@ import javax.persistence.*;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Jogador {
+public class Entrada {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Integer id;
 
-    private String nome;
+    @Enumerated(EnumType.STRING)
+    private Jogada jogada;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "jogador_id", referencedColumnName = "id")
+    private Jogador jogador;
 
 
 }
