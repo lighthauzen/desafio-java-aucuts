@@ -1,7 +1,9 @@
 INSERT INTO jogador(nome) VALUES
-('oscar') ,
- ('andrea');
+ ('oscar') ,
+ ('andrea'),
+ ('paulo');
 
 INSERT INTO entrada(jogada, jogador_id) VALUES
  ('spock', 1),
- ('lagarto', 2)
+ ('tesoura', 2),
+ ('tesoura', 3);
