@@ -1,4 +1,4 @@
-package com.example.desafiojava.services;
+package com.example.desafiojava.services.validacao;
 
 
 import com.example.desafiojava.models.Entrada;
